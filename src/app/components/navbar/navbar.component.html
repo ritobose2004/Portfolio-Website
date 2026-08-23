@@ -1,0 +1,82 @@
+<nav class="glass-card flex items-center justify-between px-6 py-4 md:px-16 w-full fixed top-0 z-50 rounded-b-2xl border-t-0 border-x-0">
+
+    <div class="flex items-center gap-2 cursor-pointer" routerLink="/home">
+        <span class="text-[#4F46E5] text-2xl font-bold">•</span>
+        <span class="text-slate-900 dark:text-white text-xl font-bold tracking-wide transition-colors">Ritobrata</span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-10">
+        <a routerLink="/home" routerLinkActive="border-b-2 border-[#4F46E5] text-[#4F46E5]"
+            [routerLinkActiveOptions]="{exact: true}"
+            class="text-slate-700 dark:text-gray-300 font-medium hover:text-[#4F46E5] dark:hover:text-white transition-colors pb-1">Home</a>
+        <a routerLink="/about" routerLinkActive="border-b-2 border-[#4F46E5] text-[#4F46E5]"
+            class="text-slate-700 dark:text-gray-300 font-medium hover:text-[#4F46E5] dark:hover:text-white transition-colors pb-1">About</a>
+        <a routerLink="/skills" routerLinkActive="border-b-2 border-[#4F46E5] text-[#4F46E5]"
+            class="text-slate-700 dark:text-gray-300 font-medium hover:text-[#4F46E5] dark:hover:text-white transition-colors pb-1">Skills</a>
+        <a routerLink="/projects" routerLinkActive="border-b-2 border-[#4F46E5] text-[#4F46E5]"
+            class="text-slate-700 dark:text-gray-300 font-medium hover:text-[#4F46E5] dark:hover:text-white transition-colors pb-1">Projects</a>
+    </div>
+
+    <!-- Desktop Right side actions -->
+    <div class="hidden md:flex items-center gap-6">
+        <button (click)="toggleTheme()"
+            class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+            <svg *ngIf="isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <svg *ngIf="!isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-700" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        </button>
+
+        <a routerLink="/contact"
+            class="bg-[#4F46E5] hover:bg-[#4338CA] text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg">
+            Contact Me
+        </a>
+    </div>
+    
+    <!-- Mobile Hamburger -->
+    <button class="md:hidden text-slate-700 dark:text-gray-300 focus:outline-none" (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+</nav>
+
+<!-- Mobile Menu Dropdown -->
+<div *ngIf="isMenuOpen"
+    class="md:hidden glass-card fixed top-[72px] left-0 w-full z-40 flex flex-col items-center py-8 gap-6 transition-all border-x-0 rounded-b-3xl">
+    <button (click)="toggleTheme()"
+        class="p-2 mb-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+        <span *ngIf="isDarkMode" class="text-yellow-400 font-medium">☀️ Light Mode</span>
+        <span *ngIf="!isDarkMode" class="text-slate-700 font-medium">🌙 Dark Mode</span>
+    </button>
+    
+    <!-- Consistent Mobile Links with Active States -->
+    <a routerLink="/home" routerLinkActive="text-[#4F46E5] font-bold" [routerLinkActiveOptions]="{exact: true}" 
+        class="text-slate-700 dark:text-gray-300 font-medium text-lg hover:text-[#4F46E5] dark:hover:text-white" 
+        (click)="toggleMenu()">Home</a>
+        
+    <a routerLink="/about" routerLinkActive="text-[#4F46E5] font-bold" 
+        class="text-slate-700 dark:text-gray-300 font-medium text-lg hover:text-[#4F46E5] dark:hover:text-white"
+        (click)="toggleMenu()">About</a>
+        
+    <a routerLink="/skills" routerLinkActive="text-[#4F46E5] font-bold" 
+        class="text-slate-700 dark:text-gray-300 font-medium text-lg hover:text-[#4F46E5] dark:hover:text-white"
+        (click)="toggleMenu()">Skills</a>
+        
+    <a routerLink="/projects" routerLinkActive="text-[#4F46E5] font-bold" 
+        class="text-slate-700 dark:text-gray-300 font-medium text-lg hover:text-[#4F46E5] dark:hover:text-white" 
+        (click)="toggleMenu()">Projects</a>
+        
+    <a routerLink="/contact" class="bg-[#4F46E5] text-white px-8 py-3 rounded-full font-medium mt-2 shadow-lg"
+        (click)="toggleMenu()">Contact Me</a>
+</div>
