@@ -1,59 +1,165 @@
-# PortfolioApp
+# 🚀 Ritobrata Bose \| Personal Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
+A modern, responsive personal portfolio built with **Angular 19**,
+**TypeScript**, and **Tailwind CSS**, featuring a glassmorphic UI,
+interactive animations, dynamic theming, and a fully responsive design.
 
-## Development server
+🌐 **Live Portfolio:**
+https://portfolio-website-zeta-eight-15.vercel.app/
 
-To start a local development server, run:
+------------------------------------------------------------------------
 
-```bash
+## ✨ Features
+
+-   🎨 Glassmorphic & responsive UI
+-   🌓 Light/Dark theme toggle
+-   ✨ Interactive particle background using `tsParticles`
+-   🧊 3D card hover effects using `vanilla-tilt`
+-   🎬 Scroll animations using `AOS`
+-   📩 Contact form with browser `LocalStorage`
+-   📱 Mobile-first responsive design
+-   📄 Downloadable one-page resume
+
+------------------------------------------------------------------------
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+-   Angular 19
+-   TypeScript
+-   Tailwind CSS
+-   SCSS
+
+### Animations & UI
+
+-   `@tsparticles/angular`
+-   `vanilla-tilt`
+-   `AOS`
+
+### Deployment
+
+-   Vercel
+
+------------------------------------------------------------------------
+
+## 📂 Project Architecture
+
+``` text
+Portfolio-Website/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── about/
+│   │   │   ├── contact/
+│   │   │   ├── footer/
+│   │   │   ├── home/
+│   │   │   ├── navbar/
+│   │   │   ├── projects/
+│   │   │   └── skills/
+│   │   │
+│   │   ├── directives/
+│   │   │   └── tilt.directive.ts
+│   │   │
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   └── app.routes.ts
+│   │
+│   ├── assets/
+│   │   ├── profile.jpeg
+│   │   └── Ritobrata_Bose_Resume.pdf
+│   │
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.scss
+│
+├── public/
+├── angular.json
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+└── README.md
+```
+
+------------------------------------------------------------------------
+
+## 💼 Featured Projects
+
+### Req-Bridge Pro --- Project Requirement Management System
+
+Enterprise-oriented requirement management platform built using a
+layered architecture.
+
+**Tech:** C#, ASP.NET Core Web API, Entity Framework Core, Angular, SQL
+Server
+
+**Highlights:** - JWT authentication & role-based authorization -
+Requirement management workflow - RESTful API architecture - Entity
+Framework Core - Modular Angular frontend
+
+### EcoSaviour --- Smart Waste & Carbon Tracker
+
+AI-powered platform for waste classification and carbon footprint
+tracking.
+
+**Tech:** Next.js, Tailwind CSS, Machine Learning, LLMs
+
+**Highlights:** - Supervised ML-based waste classification - Carbon
+footprint tracking - LLM-powered features - Voice assistant integration
+
+------------------------------------------------------------------------
+
+## 🚀 Run Locally
+
+### Prerequisites
+
+-   Node.js 18+
+-   npm
+-   Angular CLI
+
+### Installation
+
+``` bash
+git clone https://github.com/ritobose2004/Portfolio-Website.git
+cd Portfolio-Website
+npm install
+```
+
+### Start Development Server
+
+``` bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+``` text
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Production Build
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+``` bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+------------------------------------------------------------------------
 
-## Running unit tests
+## 📫 Connect
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+**Ritobrata Bose**\
+Full Stack .NET Developer
 
-```bash
-ng test
-```
+📧 Email: boseritabrata100@gmail.com\
+📍 Bhubaneswar, India\
+🔗 GitHub: https://github.com/ritobose2004\
+🌐 Portfolio: https://portfolio-website-zeta-eight-15.vercel.app/
 
-## Running end-to-end tests
+------------------------------------------------------------------------
 
-For end-to-end (e2e) testing, run:
+### ⭐ Designed & Built by Ritobrata Bose
 
-```bash
-ng e2e
-```
+© 2026 Ritobrata Bose
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
